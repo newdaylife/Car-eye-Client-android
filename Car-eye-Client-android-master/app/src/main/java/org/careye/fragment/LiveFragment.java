@@ -226,7 +226,7 @@ public class LiveFragment extends Fragment implements View.OnClickListener {
                 switchSelect(mMvPlayer4);
                 break;
             case R.id.iv_play:
-                play(mCurrPlayer, URL1);
+                play(mCurrPlayer, URL);
                 break;
             case R.id.iv_voice:
                 setMuteEnable(mCurrPlayer);
@@ -469,6 +469,7 @@ public class LiveFragment extends Fragment implements View.OnClickListener {
     * */
     private void switchSelect(MediaView mMvPlayer) {
         if (mMvPlayer == mMvPlayer1) {
+            URL=URL1;
             if (mv_player_ll2.getVisibility() == View.VISIBLE) {
                 mv_player_ll2.setVisibility(View.GONE);
                 mMvPlayer2.setVisibility(View.GONE);
@@ -477,6 +478,7 @@ public class LiveFragment extends Fragment implements View.OnClickListener {
                 mMvPlayer2.setVisibility(View.VISIBLE);
             }
         } else if (mMvPlayer == mMvPlayer2) {
+            URL=URL2;
             if (mv_player_ll2.getVisibility() == View.VISIBLE) {
                 mv_player_ll2.setVisibility(View.GONE);
                 mMvPlayer1.setVisibility(View.GONE);
@@ -485,6 +487,7 @@ public class LiveFragment extends Fragment implements View.OnClickListener {
                 mMvPlayer1.setVisibility(View.VISIBLE);
             }
         } else if (mMvPlayer == mMvPlayer3) {
+            URL=URL3;
             if (mv_player_ll1.getVisibility() == View.VISIBLE) {
                 mv_player_ll1.setVisibility(View.GONE);
                 mMvPlayer4.setVisibility(View.GONE);
@@ -493,6 +496,7 @@ public class LiveFragment extends Fragment implements View.OnClickListener {
                 mMvPlayer4.setVisibility(View.VISIBLE);
             }
         } else {
+            URL=URL4;
             if (mv_player_ll1.getVisibility() == View.VISIBLE) {
                 mv_player_ll1.setVisibility(View.GONE);
                 mMvPlayer3.setVisibility(View.GONE);
