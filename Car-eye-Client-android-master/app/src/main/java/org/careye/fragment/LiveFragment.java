@@ -469,7 +469,7 @@ public class LiveFragment extends Fragment implements View.OnClickListener {
     * */
     private void switchSelect(MediaView mMvPlayer) {
         if (mMvPlayer == mMvPlayer1) {
-            URL=URL1;
+            URL=URL1;//
             if (mv_player_ll2.getVisibility() == View.VISIBLE) {
                 mv_player_ll2.setVisibility(View.GONE);
                 mMvPlayer2.setVisibility(View.GONE);
